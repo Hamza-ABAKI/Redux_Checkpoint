@@ -15,11 +15,12 @@ const ListTask = () => {
     }
     return todos
   }
+  console.log(todos)
   return (
     <div>
       <Filter />
       {filterTask().map((todo) => {
-        return <Task todo={todo} />
+        return <Task key={todo.id} todo={todo} />
       })}
     </div>
   )

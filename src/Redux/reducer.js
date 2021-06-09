@@ -1,9 +1,9 @@
 import { v4 as uuidv4 } from 'uuid'
 const initialState = {
   tasks: [
-    { id: uuidv4(), Task: 'Task 1', Done: true },
-    { id: uuidv4(), Task: 'Task 2', Done: false },
-    { id: uuidv4(), Task: 'Task 3', Done: true },
+    { id: uuidv4(), Task: 'Task 1', Done: false },
+    { id: uuidv4(), Task: 'Task 2', Done: true },
+    { id: uuidv4(), Task: 'Task 3', Done: false },
   ],
   Show: 'All',
 }
@@ -16,6 +16,7 @@ const reducer = (state = initialState, { type, payload }) => {
         show: state.show,
       }
     case 'delete':
+      console.log(payload)
       return {
         tasks: [...state.tasks].filter((task) => task.id !== payload.id),
         show: state.show,
