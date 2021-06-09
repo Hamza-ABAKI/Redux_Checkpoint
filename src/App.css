@@ -1,38 +1,37 @@
+* {
+  margin: 0px;
+}
 .App {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Task {
+  margin: 0px 300px 0px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.ListTask {
+  margin: 0px 300px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.ListTask button {
+  margin: 0px 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.AddTask {
+  margin: 30px 300px 0px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.select {
+  margin: 0px 5px;
+  width: 8rem;
+  border: lightblue;
+}
+.Edit,
+.Delete {
+  width: 5rem;
+  margin: 0px 5px;
+}
+.checktxt {
+  margin: 0px 0px 0px 10px;
+}
+.checkbox {
+  margin: 10px;
+}
+.editBox .form-control {
+  width: 29rem !important;
 }
