@@ -15,7 +15,7 @@ const Task = ({ todo }) => {
             {edit ? (
               <div className='editBox'>
                 <FormControl
-                  placeholder={todo.Task}
+                  placeholder={task}
                   value={task}
                   onChange={(e) => setTask(e.target.value)}
                 />
@@ -52,7 +52,7 @@ const Task = ({ todo }) => {
                   setEdit(!edit)
                   dispatch({
                     type: 'edit',
-                    payload: todo,
+                    payload: { id: todo.id, tsk: task },
                   })
                 }}
               >
@@ -62,7 +62,12 @@ const Task = ({ todo }) => {
               <Button
                 className='Delete'
                 variant='danger'
-                onClick={() => dispatch({ type: 'delete', payload: todo })}
+                onClick={() =>
+                  dispatch({
+                    type: 'delete',
+                    payload: todo,
+                  })
+                }
               >
                 Delete
               </Button>

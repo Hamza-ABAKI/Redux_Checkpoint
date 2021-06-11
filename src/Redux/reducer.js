@@ -16,7 +16,6 @@ const reducer = (state = initialState, { type, payload }) => {
         show: state.show,
       }
     case 'delete':
-      console.log(payload)
       return {
         tasks: [...state.tasks].filter((task) => task.id !== payload.id),
         show: state.show,
@@ -31,7 +30,7 @@ const reducer = (state = initialState, { type, payload }) => {
     case 'edit':
       return {
         tasks: [...state.tasks].map((task) =>
-          task.id === payload.id ? { ...task, Task: payload.Task } : task
+          task.id === payload.id ? { ...task, Task: payload.tsk } : task
         ),
         show: state.show,
       }
